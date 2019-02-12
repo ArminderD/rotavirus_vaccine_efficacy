@@ -1,3 +1,6 @@
+#rm(list=ls())
+library(Rcpp)
+
 #source c++ VE to iVE conversion method
 sourceCpp("./cumVEtoInsFast.cpp")
 
@@ -122,3 +125,4 @@ empiricalDifference <- function(
     )
   )
 }
+
