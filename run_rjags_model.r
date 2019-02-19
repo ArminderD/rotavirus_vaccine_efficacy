@@ -1,5 +1,5 @@
 model_code <- jcodes[[model]]
-for(m in c("Low", "Medium", "High")){
+for(m in "High"){
   jdat <- list(
     cases_placebo=round(vaccine_efficacy_data[mortality == m, cum_cases_placebo]),
     cases_vaccine=round(vaccine_efficacy_data[mortality == m, cum_cases_vaccine]),

@@ -25,8 +25,8 @@ plotEstimates <- function(vaccine_efficacy_data, vaccine_efficacy_central = NULL
   )+coord_cartesian(
     ylim=c(0, 1),
     xlim=c(0.2, 36)
-  )+facet_grid(
-    vaccine_efficacy~mortality_factor
+  # )+facet_grid(
+  #   vaccine_efficacy~mortality_factor
   )+labs(
     x="Months since completed vaccine schedule",
     y="Vaccine efficacy (prop)"
