@@ -1,5 +1,5 @@
 
-for(m in c("Low", "Medium", "High")){
+for(m in "High"){
   #combine chains
   jposterior <- do.call(
     rbind,
@@ -132,13 +132,14 @@ for(m in c("Low", "Medium", "High")){
 }
 vaccine_efficacy_central <- rbindlist(
   list(
-    vaccine_efficacy_central_high,
-    vaccine_efficacy_central_medium,
-    vaccine_efficacy_central_low
+    vaccine_efficacy_central_high
+    # vaccine_efficacy_central_medium,
+    # vaccine_efficacy_central_low
   )
 )
 
 vaccine_efficacy_central[, "mortality_factor"] <- factor(
   vaccine_efficacy_central[, mortality],
-  levels=c("Low", "Medium", "High")
+  # levels=c("Low", "Medium", "High")
+  levels="High"
 )
