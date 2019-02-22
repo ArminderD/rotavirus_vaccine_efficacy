@@ -57,7 +57,8 @@ source("run_rjags_model.r")
 #trace warnings can be ignored
 
 #check mcmc chains for each mortality stratum
-plot(posterior_low)
+#plot(posterior_low)
+plot(posterior_high)
 
 #further diagnostics
 #acfplot(posterior_low)
